@@ -29,6 +29,9 @@
 
 - (void) setTitle: (NSString*)title;
 
+- (id) initWithContainerView: (UIView*) view delegate: (id<BBInputViewControllerDelegate>) delegate;
+- (void) setInputView: (UIView*) inputView hasNext: (BOOL) hasNext title: (NSString*) title;
+
 @end
 
 @protocol BBInputViewControllerDelegate<NSObject>

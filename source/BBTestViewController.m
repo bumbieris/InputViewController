@@ -34,13 +34,11 @@
     
 	// Do any additional setup after loading the view.
     self.pickerController = //[self.storyboard instantiateViewControllerWithIdentifier:@"pickercontroller"];
-        [[BBInputViewController alloc] init];
-    self.pickerController.delegate = self;
+    [[BBInputViewController alloc] initWithContainerView:self.view delegate:self];
     _pickerController.extraY = 10;
-
     _pickerController.toolbar.tintColor = [UIColor blackColor];
     
-    [_pickerController setContainerView: self.view];
+//    [_pickerController setContainerView: self.view];
     [_pickerController initializeControlWithPicker:_text0 pickerDelegate:self pickerDataSource:self];
     [_pickerController initializeControlWithPicker:_text2 pickerDelegate:self pickerDataSource:self];
     [_pickerController initializeControlWithKeyboard:_text1];
@@ -55,8 +53,7 @@
 
 - (BOOL) textFieldShouldBeginEditing:(UITextField *)textField
 {
-    [_pickerController setInputView: textField hasNext:textField != _text2];
-    [_pickerController setTitle: textField.placeholder];
+    [_pickerController setInputView: textField hasNext:textField != _text2 title:textField.placeholder];
     return YES;
 }
 
@@ -88,7 +85,6 @@
     else if (input ==_text1)
         next=_text2;
     [next becomeFirstResponder];
-    [_pickerController setInputView:next hasNext:next != _text2];
 }
 
 @end

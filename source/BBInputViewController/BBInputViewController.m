@@ -25,6 +25,21 @@
     return self;
 }
 
+- (id) initWithContainerView: (UIView*) view delegate: (id<BBInputViewControllerDelegate>) delegate
+{
+    if (self = [super initWithNibName:@"BBInputViewController" bundle:nil]){
+        _containerView = view;
+        _delegate = delegate;
+    }
+    return self;
+}
+
+- (void) setInputView: (UIView*) inputView hasNext: (BOOL) hasNext title: (NSString*) title
+{
+    [self setInputView:inputView hasNext:hasNext];
+    [self setTitle:title];
+}
+
 - (void) initializeControlWithPicker: (UIView*) control
                       pickerDelegate: (id<UIPickerViewDelegate>) pickerDelegate
                     pickerDataSource: (id<UIPickerViewDataSource>) pickerDataSource;
