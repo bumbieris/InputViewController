@@ -1,7 +1,9 @@
 InputViewController
 ===================
 
-simple view controller to provide a nice inputview + accessory view and manage screen positioning.
+Simple view controller to provide an input view + input accessory view toolbar for 
+UIViews with the setInputView and setInputAccessoryView methods; and manage screen positioning of
+UIViews which would normally be hidden by the InputView.
 
 Usage
 =====
@@ -17,9 +19,30 @@ these views accordingly.
 
 When you become aware of view becoming firstResponder (e.g. textFieldShouldBeginEditing)
 call the - (void) setInputView: hasNext: method.  This will move the screen up if needed and set
-the Done/Next button based on the hasNext: boolean parameter.
+the Done/Next button on the toolbar based on the hasNext: boolean parameter.
 
 Implement BBInputViewControllerDelegate<NSObject> to recieve notifications of next button being pressed.
 If the button is in 'Done' mode - the responder is resigned and this protocol's message is not called.
 
 Note: It is up to clients to implement the correct protocols such PickerView delegate/datasource etc..
+
+Toolbar
+=======
+
+Has three UIBarButtonItems.  
+
+Cancel - simply calls resignFirstResponder, dismissing the inputview and resets screen position if necessary.  
+
+Title is an optional centre title 
+
+Next/Done is a simple means of chaining responders together.  If the button is in 'Next' state 
+it will call the BBInputViewControllerDelegate delegate (if set) to allow the client to pass a 
+next UIView in via the setInputView: hasNext: message.
+
+If the button is in 'Done' state - it simply does same as Cancel.
+
+Localization
+============
+
+Use the following keys to localize the toolbar button titles:
+"Cancel", "Next", "Done"
