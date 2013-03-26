@@ -18,7 +18,7 @@ setInputView and setInputAccessoryView to use this class, if they don't then the
 these views accordingly.
 
 When you become aware of view becoming firstResponder (e.g. textFieldShouldBeginEditing)
-call the - (void) setInputView: hasNext: method.  This will move the screen up if needed and set
+call the - (void) setInputView: (UIView*) hasNext: (BOOL) method.  This will move the screen up if needed and set
 the Done/Next button on the toolbar based on the hasNext: boolean parameter.
 
 Implement BBInputViewControllerDelegate<NSObject> to recieve notifications of next button being pressed.
@@ -33,7 +33,7 @@ Has three UIBarButtonItems.
 
 Cancel - simply calls resignFirstResponder, dismissing the inputview and resets screen position if necessary.  
 
-Title is an optional centre title 
+Title is an optional centre title - call [setTitle: (NSString*) title] to set.
 
 Next/Done is a simple means of chaining responders together.  If the button is in 'Next' state 
 it will call the BBInputViewControllerDelegate delegate (if set) to allow the client to pass a 
