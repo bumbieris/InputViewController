@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1866CB5516FFB24D007DD837 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866CB5416FFB24D007DD837 /* UIKit.framework */; };
+		1866CB5716FFB24D007DD837 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866CB5616FFB24D007DD837 /* Foundation.framework */; };
+		1866CB5916FFB24D007DD837 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866CB5816FFB24D007DD837 /* CoreGraphics.framework */; };
+		1866CB5B16FFB24D007DD837 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1866CB5A16FFB24D007DD837 /* CoreData.framework */; };
+		1866CB6116FFB24D007DD837 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1866CB5F16FFB24D007DD837 /* InfoPlist.strings */; };
+		1866CB6316FFB24D007DD837 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866CB6216FFB24D007DD837 /* main.m */; };
+		1866CB6716FFB24D007DD837 /* BBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866CB6616FFB24D007DD837 /* BBAppDelegate.m */; };
+		1866CB6916FFB24D007DD837 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1866CB6816FFB24D007DD837 /* Default.png */; };
+		1866CB6B16FFB24D007DD837 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1866CB6A16FFB24D007DD837 /* Default@2x.png */; };
+		1866CB6D16FFB24D007DD837 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1866CB6C16FFB24D007DD837 /* Default-568h@2x.png */; };
+		1866CB9316FFB32E007DD837 /* temp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1866CB9216FFB32E007DD837 /* temp.storyboard */; };
+		1866CB9616FFB406007DD837 /* BBTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1866CB9516FFB406007DD837 /* BBTestViewController.m */; };
+		18B6E2FA170110A000AD20E5 /* licence.txt in Resources */ = {isa = PBXBuildFile; fileRef = 18B6E2F91701109F00AD20E5 /* licence.txt */; };
+		18B6E2FF1701122000AD20E5 /* BBInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B6E2FD1701122000AD20E5 /* BBInputViewController.m */; };
+		18B6E3001701122000AD20E5 /* BBInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18B6E2FE1701122000AD20E5 /* BBInputViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1866CB5116FFB24D007DD837 /* BBInputViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBInputViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1866CB5416FFB24D007DD837 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1866CB5616FFB24D007DD837 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1866CB5816FFB24D007DD837 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1866CB5A16FFB24D007DD837 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		1866CB5E16FFB24D007DD837 /* BBInputViewController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BBInputViewController-Info.plist"; sourceTree = "<group>"; };
+		1866CB6016FFB24D007DD837 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1866CB6216FFB24D007DD837 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1866CB6416FFB24D007DD837 /* BBInputViewController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBInputViewController-Prefix.pch"; sourceTree = "<group>"; };
+		1866CB6516FFB24D007DD837 /* BBAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBAppDelegate.h; sourceTree = "<group>"; };
+		1866CB6616FFB24D007DD837 /* BBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBAppDelegate.m; sourceTree = "<group>"; };
+		1866CB6816FFB24D007DD837 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1866CB6A16FFB24D007DD837 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		1866CB6C16FFB24D007DD837 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1866CB7716FFB24D007DD837 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		1866CB9216FFB32E007DD837 /* temp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = temp.storyboard; sourceTree = "<group>"; };
+		1866CB9416FFB406007DD837 /* BBTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTestViewController.h; sourceTree = "<group>"; };
+		1866CB9516FFB406007DD837 /* BBTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTestViewController.m; sourceTree = "<group>"; };
+		18B6E2F91701109F00AD20E5 /* licence.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = licence.txt; sourceTree = "<group>"; };
+		18B6E2FC1701122000AD20E5 /* BBInputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBInputViewController.h; sourceTree = "<group>"; };
+		18B6E2FD1701122000AD20E5 /* BBInputViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBInputViewController.m; sourceTree = "<group>"; };
+		18B6E2FE1701122000AD20E5 /* BBInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BBInputViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1866CB4E16FFB24D007DD837 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1866CB5516FFB24D007DD837 /* UIKit.framework in Frameworks */,
+				1866CB5716FFB24D007DD837 /* Foundation.framework in Frameworks */,
+				1866CB5916FFB24D007DD837 /* CoreGraphics.framework in Frameworks */,
+				1866CB5B16FFB24D007DD837 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1866CB4816FFB24C007DD837 = {
+			isa = PBXGroup;
+			children = (
+				1866CB5C16FFB24D007DD837 /* source */,
+				1866CB5316FFB24D007DD837 /* Frameworks */,
+				1866CB5216FFB24D007DD837 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1866CB5216FFB24D007DD837 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1866CB5116FFB24D007DD837 /* BBInputViewController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1866CB5316FFB24D007DD837 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1866CB5416FFB24D007DD837 /* UIKit.framework */,
+				1866CB5616FFB24D007DD837 /* Foundation.framework */,
+				1866CB5816FFB24D007DD837 /* CoreGraphics.framework */,
+				1866CB5A16FFB24D007DD837 /* CoreData.framework */,
+				1866CB7716FFB24D007DD837 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1866CB5C16FFB24D007DD837 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				18B6E2FB1701122000AD20E5 /* BBInputViewController */,
+				1866CB6516FFB24D007DD837 /* BBAppDelegate.h */,
+				1866CB6616FFB24D007DD837 /* BBAppDelegate.m */,
+				1866CB5D16FFB24D007DD837 /* Supporting Files */,
+				1866CB9216FFB32E007DD837 /* temp.storyboard */,
+				1866CB9416FFB406007DD837 /* BBTestViewController.h */,
+				1866CB9516FFB406007DD837 /* BBTestViewController.m */,
+				18B6E2F91701109F00AD20E5 /* licence.txt */,
+			);
+			name = source;
+			path = source;
+			sourceTree = "<group>";
+		};
+		1866CB5D16FFB24D007DD837 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1866CB5E16FFB24D007DD837 /* BBInputViewController-Info.plist */,
+				1866CB5F16FFB24D007DD837 /* InfoPlist.strings */,
+				1866CB6216FFB24D007DD837 /* main.m */,
+				1866CB6416FFB24D007DD837 /* BBInputViewController-Prefix.pch */,
+				1866CB6816FFB24D007DD837 /* Default.png */,
+				1866CB6A16FFB24D007DD837 /* Default@2x.png */,
+				1866CB6C16FFB24D007DD837 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18B6E2FB1701122000AD20E5 /* BBInputViewController */ = {
+			isa = PBXGroup;
+			children = (
+				18B6E2FC1701122000AD20E5 /* BBInputViewController.h */,
+				18B6E2FD1701122000AD20E5 /* BBInputViewController.m */,
+				18B6E2FE1701122000AD20E5 /* BBInputViewController.xib */,
+			);
+			path = BBInputViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1866CB5016FFB24D007DD837 /* BBInputViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1866CB8916FFB24D007DD837 /* Build configuration list for PBXNativeTarget "BBInputViewController" */;
+			buildPhases = (
+				1866CB4D16FFB24D007DD837 /* Sources */,
+				1866CB4E16FFB24D007DD837 /* Frameworks */,
+				1866CB4F16FFB24D007DD837 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBInputViewController;
+			productName = temp;
+			productReference = 1866CB5116FFB24D007DD837 /* BBInputViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1866CB4916FFB24C007DD837 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = BB;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = bumbieris;
+			};
+			buildConfigurationList = 1866CB4C16FFB24C007DD837 /* Build configuration list for PBXProject "BBInputViewController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1866CB4816FFB24C007DD837;
+			productRefGroup = 1866CB5216FFB24D007DD837 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1866CB5016FFB24D007DD837 /* BBInputViewController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1866CB4F16FFB24D007DD837 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1866CB6116FFB24D007DD837 /* InfoPlist.strings in Resources */,
+				1866CB6916FFB24D007DD837 /* Default.png in Resources */,
+				1866CB6B16FFB24D007DD837 /* Default@2x.png in Resources */,
+				1866CB6D16FFB24D007DD837 /* Default-568h@2x.png in Resources */,
+				1866CB9316FFB32E007DD837 /* temp.storyboard in Resources */,
+				18B6E2FA170110A000AD20E5 /* licence.txt in Resources */,
+				18B6E3001701122000AD20E5 /* BBInputViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1866CB4D16FFB24D007DD837 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1866CB6316FFB24D007DD837 /* main.m in Sources */,
+				1866CB6716FFB24D007DD837 /* BBAppDelegate.m in Sources */,
+				1866CB9616FFB406007DD837 /* BBTestViewController.m in Sources */,
+				18B6E2FF1701122000AD20E5 /* BBInputViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1866CB5F16FFB24D007DD837 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1866CB6016FFB24D007DD837 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1866CB8716FFB24D007DD837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1866CB8816FFB24D007DD837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1866CB8A16FFB24D007DD837 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "source/BBInputViewController-Prefix.pch";
+				INFOPLIST_FILE = "source/BBInputViewController-Info.plist";
+				PRODUCT_NAME = BBInputViewController;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1866CB8B16FFB24D007DD837 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "source/BBInputViewController-Prefix.pch";
+				INFOPLIST_FILE = "source/BBInputViewController-Info.plist";
+				PRODUCT_NAME = BBInputViewController;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1866CB4C16FFB24C007DD837 /* Build configuration list for PBXProject "BBInputViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1866CB8716FFB24D007DD837 /* Debug */,
+				1866CB8816FFB24D007DD837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1866CB8916FFB24D007DD837 /* Build configuration list for PBXNativeTarget "BBInputViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1866CB8A16FFB24D007DD837 /* Debug */,
+				1866CB8B16FFB24D007DD837 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1866CB4916FFB24C007DD837 /* Project object */;
+}
