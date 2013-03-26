@@ -46,3 +46,8 @@ Localization
 
 Use the following keys to localize the toolbar button titles:
 "Cancel", "Next", "Done"
+
+Licence
+=======
+
+This software component is licenced under the MIT licence.  Please see source/licence.txt for full text.
