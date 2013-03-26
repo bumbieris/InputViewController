@@ -11,6 +11,7 @@
 @interface BBInputViewController ()
 @property(nonatomic, weak) IBOutlet UIBarButtonItem* nextButton;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem* titleButton;
+@property(nonatomic, weak) IBOutlet UIBarButtonItem* cancelButton;
 - (IBAction) nextPressed: (id) button;
 - (IBAction) cancelPressed: (id) button;
 - (void) initializeIfNot;
@@ -113,8 +114,10 @@
 {
     // as the nib is just being used as a container the loadview is typically not being called
     // and not wiring up the controls - so do a lazy initialize here
-    if (_toolbar == nil)
+    if (_toolbar == nil){
         [self loadView];
+        _cancelButton.title = NSLocalizedString(@"Cancel", @"Cancel");
+    }
 }
 
 - (IBAction) nextPressed: (id) button
