@@ -8,7 +8,7 @@ UIViews which would normally be hidden by the InputView.
 Usage
 =====
 
-copy files out of source/BBInputViewController to use.  source/ itself contains a driver program
+Copy files out of source/BBInputViewController to use.  source/ itself contains a driver program
 to give example of how to use the BBInputViewController.  
 
 There are 2 types of input provided: keyboard and the UIPickerView.  
