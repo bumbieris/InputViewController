@@ -11,6 +11,9 @@
 @protocol BBInputViewControllerDelegate;
 
 @interface BBInputViewController : UIViewController
+{
+    CGFloat _yOff;
+}
 @property (nonatomic, strong) IBOutlet UIPickerView* pickerView;
 @property (nonatomic, strong) IBOutlet UIToolbar* toolbar;
 @property (nonatomic) CGFloat extraY;

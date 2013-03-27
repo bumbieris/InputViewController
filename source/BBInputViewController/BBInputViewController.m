@@ -82,13 +82,17 @@
         _nextButton.action = @selector(cancelPressed:);
     }
     
-    CGRect r = [vcView convertRect:inputView.frame toView:vcView];
-    CGFloat yOff = vcView.frame.size.height - CGRectGetMaxY(r) - 260 - _extraY;
+    CGRect r = [vcView.window convertRect:inputView.frame fromView:inputView.superview];
+    CGFloat yOff = vcView.window.frame.size.height + _yOff - CGRectGetMaxY(r) - 260 - _extraY;
+    
+    if (yOff > 0)
+        yOff = 0;
     
     if (vcView.frame.origin.y != yOff){
         
         [UIView animateWithDuration:0.3 animations:^{
-            CGRect f = vcView.frame; f.origin.y = yOff < 0 ? yOff : 0;
+            CGRect f = vcView.frame;
+            f.origin.y = yOff;
             vcView.frame = f;
         }];
     }
@@ -97,6 +101,7 @@
         [_currentInput resignFirstResponder];
     
     _currentInput = inputView;
+    _yOff = yOff;
 
 }
 
