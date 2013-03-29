@@ -18,7 +18,7 @@ setInputView and setInputAccessoryView to use this class, if they don't then the
 these views accordingly.
 
 When you become aware of view becoming firstResponder (e.g. textFieldShouldBeginEditing)
-call the - (void) setInputView: (UIView*) hasNext: (BOOL) method.  
+call the - (void) setInputView: (UIView*). 
 
 Implement BBInputViewControllerDelegate<NSObject> to recieve notifications of next/prev button being pressed.
 Current implementation requires the client of this delegate to implement the responder ordering.
