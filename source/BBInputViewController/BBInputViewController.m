@@ -9,11 +9,11 @@
 #import "BBInputViewController.h"
 
 @interface BBInputViewController ()
-@property(nonatomic, weak) IBOutlet UIBarButtonItem* nextButton;
+@property(nonatomic, weak) IBOutlet UIBarButtonItem* doneButton;
 @property(nonatomic, weak) IBOutlet UIBarButtonItem* titleButton;
-@property(nonatomic, weak) IBOutlet UIBarButtonItem* cancelButton;
-- (IBAction) nextPressed: (id) button;
-- (IBAction) cancelPressed: (id) button;
+@property(nonatomic, weak) IBOutlet UISegmentedControl* prevNextControl;
+- (IBAction) segmentValueChanged: (UISegmentedControl*) ctrl;
+- (IBAction) donePressed: (id) button;
 - (void) initializeIfNot;
 @end
 
@@ -71,17 +71,7 @@
 - (void) setInputView: (UIView*) inputView hasNext: (BOOL) hasNext
 {
     UIView* vcView = _containerView;
-    
-    _nextButton.target = self;
-    
-    if (hasNext && inputView){
-        _nextButton.title = NSLocalizedString(@"Next", @"Next");
-        _nextButton.action = @selector(nextPressed:);
-    }else{
-        _nextButton.title = NSLocalizedString(@"Done", @"Done");
-        _nextButton.action = @selector(cancelPressed:);
-    }
-    
+        
     CGRect r = [vcView.window convertRect:inputView.frame fromView:inputView.superview];
     CGFloat yOff = vcView.window.frame.size.height + _yOff - CGRectGetMaxY(r) - 260 - _extraY;
     
@@ -136,18 +126,23 @@
     // and not wiring up the controls - so do a lazy initialize here
     if (_toolbar == nil){
         [self loadView];
-        _cancelButton.title = NSLocalizedString(@"Cancel", @"Cancel");
+        [_prevNextControl setTitle:NSLocalizedString(@"Prev", @"Prev") forSegmentAtIndex:0];
+        [_prevNextControl setTitle:NSLocalizedString(@"Next", @"Next") forSegmentAtIndex:0];
+        _doneButton.title = NSLocalizedString(@"Done", @"Done");
     }
 }
 
-- (IBAction) nextPressed: (id) button
-{
-    [_delegate inputViewController:self nextPressedForInput:_currentInput];
-}
-
-- (IBAction) cancelPressed: (id) button
+- (IBAction) donePressed: (id) button
 {
     [self resignInputView];
+}
+
+- (IBAction) segmentValueChanged: (UISegmentedControl*) ctrl
+{
+    if (ctrl.selectedSegmentIndex == 0)
+        [_delegate inputViewController:self prevPressedForInput:_currentInput];
+    else
+        [_delegate inputViewController:self nextPressedForInput:_currentInput];
 }
 
 

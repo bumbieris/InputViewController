@@ -14,6 +14,7 @@
 			<string>IBProxyObject</string>
 			<string>IBUIBarButtonItem</string>
 			<string>IBUIPickerView</string>
+			<string>IBUISegmentedControl</string>
 			<string>IBUIToolbar</string>
 			<string>IBUIView</string>
 		</array>
@@ -51,19 +52,56 @@
 					<object class="IBUIToolbar" id="13336202">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">1290</int>
+						<array class="NSMutableArray" key="NSSubviews">
+							<object class="IBUISegmentedControl" id="635395720">
+								<reference key="NSNextResponder" ref="13336202"/>
+								<int key="NSvFlags">1316</int>
+								<string key="NSFrame">{{6, 8}, {105, 30}}</string>
+								<reference key="NSSuperview" ref="13336202"/>
+								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="912352639"/>
+								<string key="NSReuseIdentifierKey">_NS:9</string>
+								<bool key="IBUIOpaque">NO</bool>
+								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<int key="IBSegmentControlStyle">2</int>
+								<int key="IBNumberOfSegments">2</int>
+								<int key="IBSelectedSegmentIndex">0</int>
+								<array key="IBSegmentTitles">
+									<string>Prev</string>
+									<string>Next</string>
+								</array>
+								<array class="NSMutableArray" key="IBSegmentWidths">
+									<real value="0.0"/>
+									<real value="0.0"/>
+								</array>
+								<array class="NSMutableArray" key="IBSegmentEnabledStates">
+									<boolean value="YES"/>
+									<boolean value="YES"/>
+								</array>
+								<array class="NSMutableArray" key="IBSegmentContentOffsets">
+									<string>{0, 0}</string>
+									<string>{0, 0}</string>
+								</array>
+								<array class="NSMutableArray" key="IBSegmentImages">
+									<object class="NSNull" id="4"/>
+									<reference ref="4"/>
+								</array>
+								<bool key="IBMomentary">YES</bool>
+							</object>
+						</array>
 						<object class="NSPSMatrix" key="NSFrameMatrix"/>
 						<string key="NSFrameSize">{320, 44}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="635395720"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<int key="IBUITag">1</int>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<array class="NSMutableArray" key="IBUIItems">
-							<object class="IBUIBarButtonItem" id="392597188">
-								<string key="IBUITitle">Cancel</string>
+							<object class="IBUIBarButtonItem" id="731369657">
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<int key="IBUIStyle">1</int>
+								<reference key="IBUICustomView" ref="635395720"/>
 								<reference key="IBUIToolbar" ref="13336202"/>
 							</object>
 							<object class="IBUIBarButtonItem" id="196884069">
@@ -93,6 +131,7 @@
 				<string key="NSFrameSize">{320, 260}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
+				<reference key="NSNextKeyView" ref="13336202"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>
@@ -127,14 +166,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">nextButton</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="790112202"/>
-					</object>
-					<int key="connectionID">19</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">titleButton</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="138329379"/>
@@ -151,27 +182,28 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">cancelButton</string>
+						<string key="label">doneButton</string>
 						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="392597188"/>
+						<reference key="destination" ref="790112202"/>
 					</object>
-					<int key="connectionID">24</int>
+					<int key="connectionID">27</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">nextPressed:</string>
+						<string key="label">donePressed:</string>
 						<reference key="source" ref="790112202"/>
 						<reference key="destination" ref="372490531"/>
 					</object>
-					<int key="connectionID">23</int>
+					<int key="connectionID">28</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
-						<string key="label">cancelPressed:</string>
-						<reference key="source" ref="392597188"/>
+						<string key="label">segmentValueChanged:</string>
+						<reference key="source" ref="635395720"/>
 						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">13</int>
 					</object>
-					<int key="connectionID">22</int>
+					<int key="connectionID">29</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -216,7 +248,7 @@
 							<reference ref="138329379"/>
 							<reference ref="790112202"/>
 							<reference ref="196884069"/>
-							<reference ref="392597188"/>
+							<reference ref="731369657"/>
 						</array>
 						<reference key="parent" ref="191373211"/>
 					</object>
@@ -241,9 +273,17 @@
 						<reference key="parent" ref="13336202"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">17</int>
-						<reference key="object" ref="392597188"/>
+						<int key="objectID">26</int>
+						<reference key="object" ref="731369657"/>
+						<array class="NSMutableArray" key="children">
+							<reference ref="635395720"/>
+						</array>
 						<reference key="parent" ref="13336202"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">25</int>
+						<reference key="object" ref="635395720"/>
+						<reference key="parent" ref="731369657"/>
 					</object>
 				</array>
 			</object>
@@ -263,8 +303,9 @@
 				<boolean value="NO" key="15.showNotes"/>
 				<string key="16.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<boolean value="NO" key="16.showNotes"/>
-				<string key="17.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-				<boolean value="NO" key="17.showNotes"/>
+				<string key="25.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
+				<integer value="1" key="25.IUISegmentedControlInspectorSelectedSegmentMetadataKey"/>
+				<string key="26.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<string key="4.IBPluginDependency">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				<reference key="4.IBUserGuides" ref="0"/>
 				<boolean value="NO" key="4.showNotes"/>
@@ -273,7 +314,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">24</int>
+			<int key="maxID">29</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -281,38 +322,38 @@
 					<string key="className">BBInputViewController</string>
 					<string key="superclassName">UIViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
-						<string key="cancelPressed:">id</string>
-						<string key="nextPressed:">id</string>
+						<string key="donePressed:">id</string>
+						<string key="segmentValueChanged:">UISegmentedControl</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
-						<object class="IBActionInfo" key="cancelPressed:">
-							<string key="name">cancelPressed:</string>
+						<object class="IBActionInfo" key="donePressed:">
+							<string key="name">donePressed:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-						<object class="IBActionInfo" key="nextPressed:">
-							<string key="name">nextPressed:</string>
-							<string key="candidateClassName">id</string>
+						<object class="IBActionInfo" key="segmentValueChanged:">
+							<string key="name">segmentValueChanged:</string>
+							<string key="candidateClassName">UISegmentedControl</string>
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
-						<string key="cancelButton">UIBarButtonItem</string>
-						<string key="nextButton">UIBarButtonItem</string>
+						<string key="doneButton">UIBarButtonItem</string>
 						<string key="pickerView">UIPickerView</string>
+						<string key="prevNextControl">UISegmentedControl</string>
 						<string key="titleButton">UIBarButtonItem</string>
 						<string key="toolbar">UIToolbar</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
-						<object class="IBToOneOutletInfo" key="cancelButton">
-							<string key="name">cancelButton</string>
-							<string key="candidateClassName">UIBarButtonItem</string>
-						</object>
-						<object class="IBToOneOutletInfo" key="nextButton">
-							<string key="name">nextButton</string>
+						<object class="IBToOneOutletInfo" key="doneButton">
+							<string key="name">doneButton</string>
 							<string key="candidateClassName">UIBarButtonItem</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="pickerView">
 							<string key="name">pickerView</string>
 							<string key="candidateClassName">UIPickerView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="prevNextControl">
+							<string key="name">prevNextControl</string>
+							<string key="candidateClassName">UISegmentedControl</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="titleButton">
 							<string key="name">titleButton</string>

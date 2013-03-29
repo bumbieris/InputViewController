@@ -87,4 +87,14 @@
     [next becomeFirstResponder];
 }
 
+- (void) inputViewController: (BBInputViewController*) controller prevPressedForInput: (UIView*) input
+{
+    UIView* next=nil;
+    if (input ==_text2)
+        next=_text1;
+    else if (input ==_text1)
+        next=_text0;
+    [next becomeFirstResponder];
+}
+
 @end

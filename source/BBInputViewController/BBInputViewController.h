@@ -39,4 +39,5 @@
 
 @protocol BBInputViewControllerDelegate<NSObject>
 - (void) inputViewController: (BBInputViewController*) controller nextPressedForInput: (UIView*) input;
+- (void) inputViewController: (BBInputViewController*) controller prevPressedForInput: (UIView*) input;
 @end
