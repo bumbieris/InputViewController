@@ -18,11 +18,10 @@ setInputView and setInputAccessoryView to use this class, if they don't then the
 these views accordingly.
 
 When you become aware of view becoming firstResponder (e.g. textFieldShouldBeginEditing)
-call the - (void) setInputView: (UIView*) hasNext: (BOOL) method.  This will move the screen up if needed and set
-the Done/Next button on the toolbar based on the hasNext: boolean parameter.
+call the - (void) setInputView: (UIView*) hasNext: (BOOL) method.  
 
-Implement BBInputViewControllerDelegate<NSObject> to recieve notifications of next button being pressed.
-If the button is in 'Done' mode - the responder is resigned and this protocol's message is not called.
+Implement BBInputViewControllerDelegate<NSObject> to recieve notifications of next/prev button being pressed.
+Current implementation requires the client of this delegate to implement the responder ordering.
 
 Note: It is up to clients to implement the correct protocols such PickerView delegate/datasource etc..
 
@@ -31,21 +30,18 @@ Toolbar
 
 Has three UIBarButtonItems.  
 
-Cancel - simply calls resignFirstResponder, dismissing the inputview and resets screen position if necessary.  
+Done - simply calls resignFirstResponder, dismissing the inputview and resets screen position if necessary.  
 
 Title is an optional centre title - call [setTitle: (NSString*) title] to set.
 
-Next/Done is a simple means of chaining responders together.  If the button is in 'Next' state 
-it will call the BBInputViewControllerDelegate delegate (if set) to allow the client to pass a 
-next UIView in via the setInputView: hasNext: message.
-
-If the button is in 'Done' state - it simply does same as Cancel.
+Prev/Next - a UISegmentControl to control navigation of responders via the BBInputViewControllerDelegate<NSObject>
+delegate callback.
 
 Localization
 ============
 
 Use the following keys to localize the toolbar button titles:
-"Cancel", "Next", "Done"
+"Done", "Prev", "Next"
 
 Licence
 =======
