@@ -27,13 +27,13 @@
 
 - (void) initializeControlWithKeyboard: (UIView*) control;
 
-- (void) setInputView: (UIView*) inputView hasNext: (BOOL) hasNext;
+- (void) setInputView: (UIView*) inputView;
 - (void) resignInputView;
 
 - (void) setTitle: (NSString*)title;
 
 - (id) initWithContainerView: (UIView*) view delegate: (id<BBInputViewControllerDelegate>) delegate;
-- (void) setInputView: (UIView*) inputView hasNext: (BOOL) hasNext title: (NSString*) title;
+- (void) setInputView: (UIView*) inputView title: (NSString*) title;
 
 @end
 

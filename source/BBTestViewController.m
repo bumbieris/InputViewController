@@ -53,7 +53,7 @@
 
 - (BOOL) textFieldShouldBeginEditing:(UITextField *)textField
 {
-    [_pickerController setInputView: textField hasNext:textField != _text2 title:textField.placeholder];
+    [_pickerController setInputView: textField title:textField.placeholder];
     return YES;
 }
 

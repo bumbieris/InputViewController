@@ -34,9 +34,9 @@
     return self;
 }
 
-- (void) setInputView: (UIView*) inputView hasNext: (BOOL) hasNext title: (NSString*) title
+- (void) setInputView: (UIView*) inputView title: (NSString*) title
 {
-    [self setInputView:inputView hasNext:hasNext];
+    [self setInputView:inputView];
     [self setTitle:title];
 }
 
@@ -68,7 +68,7 @@
         [control performSelector:@selector(setInputView:) withObject:nil];
 }
 
-- (void) setInputView: (UIView*) inputView hasNext: (BOOL) hasNext
+- (void) setInputView: (UIView*) inputView
 {
     UIView* vcView = _containerView;
         
@@ -97,7 +97,7 @@
 
 - (void) resignInputView
 {
-    [self setInputView:nil hasNext:FALSE];
+    [self setInputView:nil];
 }
 
 - (void) setTitle: (NSString*)title
